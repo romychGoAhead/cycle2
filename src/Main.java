@@ -131,11 +131,12 @@ public class Main {
         int year200 = yearFor - 200;
         int year100 = yearFor + 100;
 
-        for (int i = year200 + 79; i < year100; i = i + 79) {
-
-
-            System.out.println(i);
-
+        for (int i = 0; i < year100; i = i + 79) {
+            if (i > year200) {
+                System.out.println(i);
+            } else {
+                System.out.println();
+            }
         }
     }
 }
