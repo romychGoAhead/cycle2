@@ -55,16 +55,16 @@ public class Main {
     public static void task3() {
         System.out.println("Задание 3");
 
-        double countryY = 12_000_000;
+        int countryY = 12_000_000;
         int mortality = 8;
         int birthRate = 17;
 
-        int year = 0;
-        while (year < 10) {
+        int year = 1;
+        while (year <= 10) {
 
-            countryY = countryY + (double) (birthRate - mortality) / 1000 * countryY;
+            countryY = countryY + Math.round((float) (birthRate - mortality) / 1000 * countryY); // чтобы всё было точно.
 
-            System.out.printf("Год " + year + " , численность населения составляет " + "%.0f \n", countryY);
+            System.out.printf("Год " + year + " , численность населения составляет " + "%d %n", countryY);
 
             year++;
         }
@@ -119,9 +119,7 @@ public class Main {
         int numberFirstFriday = 3;
 
         for (int i = numberFirstFriday; i <= 31; i = i + 7) {
-
-            System.out.println(i);
-
+            System.out.println("Сегодня пятница, " + i + "-ое число. Необходимо подготовить отчет.");
 
         }
     }
@@ -132,7 +130,9 @@ public class Main {
         int yearFor = 2023;
         int year200 = yearFor - 200;
         int year100 = yearFor + 100;
-        for (int i = 0; i < year100; i = i + 79) {
+
+        for (int i = year200 + 79; i < year100; i = i + 79) {
+
 
             System.out.println(i);
 
