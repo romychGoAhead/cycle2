@@ -62,9 +62,9 @@ public class Main {
         int year = 0;
         while (year < 10) {
 
-            countryY = countryY + (birthRate - mortality) / 1000.0 * countryY;
+            countryY = countryY + (double) (birthRate - mortality) / 1000 * countryY;
 
-            System.out.printf("Год " + year + " , численность населения составляет " + "%.2f \n", countryY);
+            System.out.printf("Год " + year + " , численность населения составляет " + "%.0f \n", countryY);
 
             year++;
         }
@@ -120,33 +120,19 @@ public class Main {
 
         for (int i = numberFirstFriday; i <= 31; i = i + 7) {
 
-        }
-        switch (numberFirstFriday) {
-            case 3:
-                System.out.println("Сегодня пятница, 3-е число. Необходимо подготовить отчет.");
+            System.out.println(i);
 
-            case 10:
-                System.out.println("Сегодня пятница, 10-е число. Необходимо подготовить отчет.");
 
-            case 17:
-                System.out.println("Сегодня пятница, 17-е число. Необходимо подготовить отчет.");
-
-            case 24:
-                System.out.println("Сегодня пятница, 24-е число. Необходимо подготовить отчет.");
-
-            case 31:
-                System.out.println("Сегодня пятница, 31-е число. Необходимо подготовить отчет.");
-                break;
         }
     }
 
     public static void task8() {
         System.out.println("Задание 8");
 
-        int yearFor = 2017;
+        int yearFor = 2023;
         int year200 = yearFor - 200;
         int year100 = yearFor + 100;
-        for (int i = year200 + 79; i < year100; i = i + 79) {
+        for (int i = 0; i < year100; i = i + 79) {
 
             System.out.println(i);
 
